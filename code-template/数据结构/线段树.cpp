@@ -8,8 +8,15 @@ template<class T> struct SegTree {
 	// 所有下标均从1开始
 	T *a, *tree_sum, *add_tag;
 
-	// a: 数据源，下标1开始  n: 数据数量
-	SegTree(T *a, int n) {
+	// 构造空线段树
+	SegTree(int n) {
+		this->n = n;
+		tree_sum = new T[n * 4]();
+		add_tag = new T[n * 4]();
+	}
+
+	// n:数据数量 a:数据源(下标1开始)
+	SegTree(int n, T *a) {
 		this->a = a;
 		this->n = n;
 		tree_sum = new T[n * 4]();
@@ -89,7 +96,7 @@ int main() {
 	for (int i = 1; i <= n; ++i) {
 		scanf("%lld", &a[i]);
 	}
-	SegTree<ll> tree(a, n);
+	SegTree<ll> tree(n, a);
 	int o, x, y, k;
 	while (m--) {
 		scanf("%d %d %d", &o, &x, &y);
