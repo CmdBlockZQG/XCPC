@@ -36,7 +36,7 @@ template<class T> struct BIT {
 	}
 
 	// 单点修改 a[x] += k
-	void add(int x, int k) {
+	void add(int x, T k) {
 		for (; x <= n; x += lb(x)) t[x] += k;
 	}
 
