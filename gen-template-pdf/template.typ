@@ -7,7 +7,7 @@
 )
 
 #set text(
-	font: "Source Han Serif CN VF"
+  font: "Source Han Serif CN VF"
 )
 
 #let code(src) = [

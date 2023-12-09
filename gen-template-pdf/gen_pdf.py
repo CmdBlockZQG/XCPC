@@ -31,3 +31,4 @@ if __name__ == "__main__":
 	with open("main.typ", "w") as f:
 		f.write(template + '\n' + res)
 	os.system("./typst compile ./main.typ --root ../")
+	# os.system("./typst.exe compile ./main.typ --root ../") # Windows
