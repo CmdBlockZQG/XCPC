@@ -18,17 +18,11 @@ ll inv(ll a, ll p) {
 
 // 快速幂
 ll qpow(ll a, ll b, ll p) {
-	ll ans = 1, base = a;
+	ll t = 1;
 	while (b) {
-		if (b & 1) ans = ans * base % p;
-		base = base * base % p;
+		if (b & 1) t = t * a % p;
+		a = a * a % p;
 		b >>= 1;
 	}
-	return ans;
-}
-
-
-int main() {
-
-	return 0;
+	return t;
 }
