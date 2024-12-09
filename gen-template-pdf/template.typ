@@ -15,7 +15,7 @@
   #raw(src.replace("\t", "  "), block: true)
 ]
 
-#show: rest => columns(2, rest)
+#show: rest => columns(1, rest)
 
 #set heading(
   numbering: "1.1"
